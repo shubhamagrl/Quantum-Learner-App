@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme -->
+
+    <style name="ThemeQuantumComputingBasics" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">#767676</item>
+        <item name="colorAccent">@color/purple_200</item>
+    </style>
+
+    <style name="ThemeQuantumComputingBasics.Dark" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">#999997</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">@color/purple_200</item>
+    </style>
+</resources>

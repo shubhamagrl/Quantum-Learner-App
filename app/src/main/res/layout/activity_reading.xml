@@ -1,0 +1,98 @@
+<!-- res/layout/activity_reading.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <!-- Toolbar for the activity -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="Reading View"
+        android:titleTextColor="@color/black"
+        app:titleTextColor="@color/black" />
+
+    <!-- Scrollable text area -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="16dp"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/button_container"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/article_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/topic1_content"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:hyphenationFrequency="none"
+            android:breakStrategy="balanced" />
+    </ScrollView>
+
+    <!-- Container for accessibility buttons -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:backgroundTint="#A6A6A4"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btn_brightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:textSize="15sp"
+            android:paddingHorizontal="5dp"
+            android:text="Previous"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_dark_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:text="Dark Mode"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_next_topic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:textSize="15sp"
+            android:layout_marginStart="16dp"
+            android:text="Next"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>
